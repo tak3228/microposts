@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 	before_action :correct_user, only: [:edit, :update]	
   def show
 	  @user = User.find(params[:id])
-	  @micropsts = @user.microposts.order(created_at: :desc)
+	  @microposts = @user.microposts.order(created_at: :desc)
   end
 
   def new

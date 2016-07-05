@@ -1,4 +1,26 @@
 <h1>
+	Profile
+</h1>
+
+<h4>
 	<%= gravatar_for @user %>
 	<%= @user.name %>
-</h1>
+</h4>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Email</h3>
+	</div>
+	<div class="panel-body">
+		<%= @user.email %>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">Region</h3>
+	</div>
+	<div class="panel-body">
+		<%= @user.region %>
+	</div>
+</div>

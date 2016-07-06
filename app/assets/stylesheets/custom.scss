@@ -111,6 +111,13 @@ input {
 /* sidebar */
 
 aside {
+  .label {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 1em;
+    
+  }
   section.user_info {
     margin-top: 20px;
   }

@@ -12,10 +12,10 @@ class User < ActiveRecord::Base
 		foreign_key: "follower_id",
 		dependent: :destroy
 	has_many :following_users, through: :following_relationships, source: :followed
-	has_many :follower_relationships, class: "Relationship",
+	has_many :follower_relationships, class_name: "Relationship",
 		foreign_key: "followed_id",
 		dependent: :destroy
-	has_many :follower_users, through: follower_relationships, source: :follower
+	has_many :follower_users, through: :follower_relationships, source: :follower
 
 
 	def follow(other_user)

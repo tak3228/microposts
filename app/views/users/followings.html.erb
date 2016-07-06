@@ -3,9 +3,12 @@
 
 
 <% @followings.each do |user| %>
-	<%= gravatar_for(user, size: 50) %>
-	<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-	<%= user.name %>
+	<div class="clearfix">
+		<%= gravatar_for(user, size: 50) %>
+		<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+		<%= user.name %>
+	</div>
+
 
 	<hr>
 

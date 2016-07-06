@@ -2,13 +2,12 @@
 
 <h1>Followers</h1>
 
-
-<div class="clearfix">
-	<% @followers.each do |user| %>
+<% @followers.each do |user| %>
+	<div class="clearfix">
 		<%= gravatar_for(user, size: 50) %>
 		<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 		<%= user.name %>
-</div>
+	</div>
 
 
 	<hr>

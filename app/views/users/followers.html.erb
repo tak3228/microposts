@@ -1,0 +1,14 @@
+
+
+<h1>Followers</h1>
+
+
+<% @followers.each do |user| %>
+	<%= gravatar_for(user, size: 50) %>
+	<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+	<%= user.name %>
+
+	<hr>
+
+
+<% end %>

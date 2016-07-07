@@ -1,0 +1,18 @@
+
+
+<h1>All Users</h1>
+
+<% @user.each do |user| %>
+	<div class="clearfix">
+		<%= gravatar_for(user, size:50) %>
+
+	 	<h5><%= user.name %></h5>
+		<br>
+		<%= user.email %>
+	</div>
+	<hr>
+	
+<% end %>
+
+<%= paginate(@user) %>
+

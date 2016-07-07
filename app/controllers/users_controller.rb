@@ -47,6 +47,12 @@ class UsersController < ApplicationController
 	  @followers = @user.follower_users
   end
 
+  def index
+	 
+	  @user = User.page(params[:page]).per(5).order(:id)
+
+  end
+
 
   private
 
